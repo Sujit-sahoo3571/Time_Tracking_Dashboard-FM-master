@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+    <!-- CSS Linked   -->
+    <link rel="stylesheet" href="./Styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="Grids">
+        <!-- jeremy -->
+        <div class="jeremy">
+          <div class="Profile">
+            <img src="./images/image-jeremy.png" alt="" class="profile-img" />
+            <div class="caption">
+              <span>Report for</span>
+              <h1 class="name">Jeremy Robson</h1>
+            </div>
+          </div>
+          <ul class="timeframes">
+            <li class="active">Daily</li>
+            <li>Weekly</li>
+            <li>Monthly</li>
+          </ul>
+        </div>
+        <!-- work  -->
+        <div class="work">
+          <div class="icon">
+            <img src="./images/icon-work.svg" alt="" />
+          </div>
+          <div class="stats">
+            <div class="header">
+              <h1 class="heading">Work</h1>
+              <svg
+                class="ellipsis"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="5"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="time-data">
+              <h1 class="time">0hrs</h1>
+              <span class="last-week">Last Week - 36hrs</span>
+            </div>
+          </div>
+        </div>
+        <!-- play  -->
+        <div class="play">
+          <div class="icon">
+            <img src="./images/icon-play.svg" alt="" />
+          </div>
+          <div class="stats">
+            <div class="header">
+              <h1 class="heading">Work</h1>
+              <svg
+                class="ellipsis"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="5"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="time-data">
+              <h1 class="time">0hrs</h1>
+              <span class="last-week">Last Week - 36hrs</span>
+            </div>
+          </div>
+        </div>
+        <!-- study  -->
+        <div class="study">
+          <div class="icon">
+            <img src="./images/icon-study.svg" alt="" />
+          </div>
+          <div class="stats">
+            <div class="header">
+              <h1 class="heading">Work</h1>
+              <svg
+                class="ellipsis"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="5"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="time-data">
+              <h1 class="time">0hrs</h1>
+              <span class="last-week">Last Week - 36hrs</span>
+            </div>
+          </div>
+        </div>
+        <!-- exercise -->
+        <div class="exercise">
+          <div class="icon">
+            <img src="./images/icon-exercise.svg" alt="" />
+          </div>
+          <div class="stats">
+            <div class="header">
+              <h1 class="heading">Work</h1>
+              <svg
+                class="ellipsis"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="5"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="time-data">
+              <h1 class="time">0hrs</h1>
+              <span class="last-week">Last Week - 36hrs</span>
+            </div>
+          </div>
+        </div>
+        <!-- social  -->
+        <div class="social">
+          <div class="icon">
+            <img src="./images/icon-social.svg" alt="" />
+          </div>
+          <div class="stats">
+            <div class="header">
+              <h1 class="heading">Work</h1>
+              <svg
+                class="ellipsis"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="5"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="time-data">
+              <h1 class="time">0hrs</h1>
+              <span class="last-week">Last Week - 36hrs</span>
+            </div>
+          </div>
+        </div>
+        <!-- self-care -->
+        <div class="self-care">
+          <div class="icon">
+            <img src="./images/icon-self-care.svg" alt="" />
+          </div>
+          <div class="stats">
+            <div class="header">
+              <h1 class="heading">Work</h1>
+              <svg
+                class="ellipsis"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="5"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="time-data">
+              <h1 class="time">0hrs</h1>
+              <span class="last-week">Last Week - 36hrs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- JS Linked  -->
+    <script src="./script.js"></script>
+  </body>
+</html>

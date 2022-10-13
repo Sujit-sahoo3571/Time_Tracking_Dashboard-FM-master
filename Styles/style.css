@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0f1424;
+}
+
+.Grids {
+  height: auto;
+  max-width: 70rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+      grid-template-areas: "profile work play study " "profile exercise social self-care";
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .Grids {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+    -ms-grid-rows: auto !important;
+        grid-template-rows: auto !important;
+        grid-template-areas: "profile " "work" "play" "study" "exercise" "social" "self-care";
+    width: 100%;
+    padding: 0 1.5rem;
+    margin: 5rem 0 3rem;
+  }
+}
+
+.jeremy {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: profile;
+  background: #1c1f4a;
+  border-radius: 10px;
+}
+
+.jeremy .Profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 2rem;
+  padding: 2rem 2rem 4rem;
+  border-radius: inherit;
+  background: #5847eb;
+}
+
+@media screen and (max-width: 900px) {
+  .jeremy .Profile {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+.jeremy .Profile .profile-img {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  height: 4.5rem;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.jeremy .Profile .caption span {
+  font-size: 0.8rem;
+  color: #bdc1ff;
+}
+
+.jeremy .Profile .caption .name {
+  font-weight: 300;
+  line-height: 1.3em;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .jeremy .Profile .caption .name {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+.jeremy .timeframes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  list-style: none;
+}
+
+@media screen and (max-width: 900px) {
+  .jeremy .timeframes {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.jeremy .timeframes li {
+  cursor: pointer;
+  color: #6f76c8;
+}
+
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self-care {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: work;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #ff8c66), to(transparent));
+  background: linear-gradient(to bottom, #ff8c66 80%, transparent);
+}
+
+.work:hover .stats,
+.play:hover .stats,
+.study:hover .stats,
+.exercise:hover .stats,
+.social:hover .stats,
+.self-care:hover .stats {
+  background: #6f76c8;
+}
+
+.work .icon,
+.play .icon,
+.study .icon,
+.exercise .icon,
+.social .icon,
+.self-care .icon {
+  position: relative;
+  height: 3rem;
+  background: #ff8c66;
+  overflow: hidden;
+}
+
+.work .icon img,
+.play .icon img,
+.study .icon img,
+.exercise .icon img,
+.social .icon img,
+.self-care .icon img {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.work .stats,
+.play .stats,
+.study .stats,
+.exercise .stats,
+.social .stats,
+.self-care .stats {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #1c1f4a;
+  border-radius: inherit;
+  padding: 1.5rem 1.5rem 2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+  .work .stats,
+  .play .stats,
+  .study .stats,
+  .exercise .stats,
+  .social .stats,
+  .self-care .stats {
+    padding: 1.5rem 1.5rem;
+    gap: 0.5rem;
+  }
+}
+
+.work .stats .header,
+.play .stats .header,
+.study .stats .header,
+.exercise .stats .header,
+.social .stats .header,
+.self-care .stats .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work .stats .header .heading,
+.play .stats .header .heading,
+.study .stats .header .heading,
+.exercise .stats .header .heading,
+.social .stats .header .heading,
+.self-care .stats .header .heading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.work .stats .header .ellipsis,
+.play .stats .header .ellipsis,
+.study .stats .header .ellipsis,
+.exercise .stats .header .ellipsis,
+.social .stats .header .ellipsis,
+.self-care .stats .header .ellipsis {
+  cursor: pointer;
+}
+
+.work .stats .header .ellipsis path,
+.play .stats .header .ellipsis path,
+.study .stats .header .ellipsis path,
+.exercise .stats .header .ellipsis path,
+.social .stats .header .ellipsis path,
+.self-care .stats .header .ellipsis path {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.work .stats .header .ellipsis:hover path,
+.play .stats .header .ellipsis:hover path,
+.study .stats .header .ellipsis:hover path,
+.exercise .stats .header .ellipsis:hover path,
+.social .stats .header .ellipsis:hover path,
+.self-care .stats .header .ellipsis:hover path {
+  fill: white;
+}
+
+@media screen and (max-width: 900px) {
+  .work .stats .time-data,
+  .play .stats .time-data,
+  .study .stats .time-data,
+  .exercise .stats .time-data,
+  .social .stats .time-data,
+  .self-care .stats .time-data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.work .stats .time-data .time,
+.play .stats .time-data .time,
+.study .stats .time-data .time,
+.exercise .stats .time-data .time,
+.social .stats .time-data .time,
+.self-care .stats .time-data .time {
+  font-size: 3rem;
+  font-weight: 300;
+  padding-bottom: 0.3rem;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .work .stats .time-data .time,
+  .play .stats .time-data .time,
+  .study .stats .time-data .time,
+  .exercise .stats .time-data .time,
+  .social .stats .time-data .time,
+  .self-care .stats .time-data .time {
+    font-size: 2rem;
+  }
+}
+
+.work .stats .time-data .last-week,
+.play .stats .time-data .last-week,
+.study .stats .time-data .last-week,
+.exercise .stats .time-data .last-week,
+.social .stats .time-data .last-week,
+.self-care .stats .time-data .last-week {
+  font-size: 0.8rem;
+  color: #bdc1ff;
+}
+
+.play {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: play;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #56c2e6), to(transparent));
+  background: linear-gradient(to bottom, #56c2e6 80%, transparent);
+}
+
+.play .icon {
+  background: #56c2e6;
+}
+
+.study {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: study;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #ff8c66), to(transparent));
+  background: linear-gradient(to bottom, #ff8c66 80%, transparent);
+}
+
+.study .icon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #ff8c66), to(transparent)) #ff8c66;
+  background: linear-gradient(to bottom, #ff8c66 80%, transparent) #ff8c66;
+}
+
+.exercise {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: exercise;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #4acf81), to(transparent));
+  background: linear-gradient(to bottom, #4acf81 80%, transparent);
+}
+
+.exercise .icon {
+  background: #4acf81;
+}
+
+.social {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: social;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #7536d3), to(transparent));
+  background: linear-gradient(to bottom, #7536d3 80%, transparent);
+}
+
+.social .icon {
+  background: #7536d3;
+}
+
+.self-care {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: self-care;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #f1c65b), to(transparent));
+  background: linear-gradient(to bottom, #f1c65b 80%, transparent);
+}
+
+.self-care .icon {
+  background: #f1c65b;
+}
+
+.active {
+  color: white !important;
+}
+/*# sourceMappingURL=style.css.map */
